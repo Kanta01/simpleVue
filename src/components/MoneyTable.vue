@@ -3,10 +3,11 @@
     <table>
       <thead>
         <tr>
-          <th>วัน เดือน ปี</th>
+          <th>วันที่</th>
           <th>รายการ</th>
           <th>รายรับ (บาท)</th>
           <th>รายจ่าย (บาท)</th>
+          <th>คงเหลือ (บาท)</th>
         </tr>
       </thead>
       <tbody>
@@ -20,9 +21,10 @@
         </tr>
         <tr>
           <td>รวม</td>
-          <td></td>
+          <td>{{ fetchMoney() }}</td>
           <td>{{ totalIncome }}</td>
           <td>{{ totalOutcome }}</td>
+          <td>{{ totalIncome-totalOutcome }}</td>
         </tr>
       </tbody>
     </table>

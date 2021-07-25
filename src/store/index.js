@@ -7,13 +7,13 @@ export default new Vuex.Store({
   state: {
     data: [
       {
-        date: '25/07/64',
+        date: '2021-07-25',
         detail: 'เงินเดือน',
         type: 'income',
         amount: 2000
       },
       {
-        date: '25/07/64',
+        date: '2021-07-25',
         detail: 'ข้าวเช้า',
         type: 'outcome',
         amount: 50
@@ -28,8 +28,16 @@ export default new Vuex.Store({
     totalOutcome: (state) => state.totalOutcome
   },
   mutations: {
+    add(state, { payload }) {
+      state.data.push(payload)
+      if(payload.type === 'income') state.totalIncome += payload.amount
+      else state.totalOutcome += payload.amount
+    }
   },
   actions: {
+    addMoney({ commit }, payload) {
+      commit("add", { payload })
+    }
   },
   modules: {
   }
