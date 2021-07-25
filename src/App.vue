@@ -8,8 +8,9 @@
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Itim', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -25,6 +26,7 @@
 
     &.router-link-exact-active {
       color: #42b983;
+      font-size: 1.5em;
     }
   }
 }

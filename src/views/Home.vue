@@ -1,6 +1,6 @@
 <template>
   <div>
-    <money-add></money-add>
+    <money-add class="add"></money-add>
     <money-table></money-table>
   </div>
 </template>
@@ -16,6 +16,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.add {
+  width: 30%;
+  float: left;
+}
 </style>
